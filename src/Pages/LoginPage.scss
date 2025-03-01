@@ -1,0 +1,34 @@
+$primery-color: rgb(251 116 62);
+
+
+.form-container{
+    input{
+        text-decoration: none;
+        padding: 8px;
+        border: 0.5px solid rgb(166, 166, 166);
+        border-radius: 10px;
+        outline: none;
+        &:focus{
+            border: none;
+            outline: 0.7px solid $primery-color;
+        }
+    }
+    button{
+        padding: 5px;
+        font-size: large;
+        border-radius: 20px;
+        background-color: $primery-color;
+        color: white;
+        font-weight: 500;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+    .forgotpass{
+       color: rgb(251 116 62);
+    }
+}
+
+.show {
+    background-color: $primery-color;
+    color: white;
+}
