@@ -4,11 +4,13 @@ import "./LoginPage.scss";
 import logo from "../assets/Sama-App-Logo.webp";
 import authPagePic from "../assets/authenticate_image.webp";
 import { toast, ToastContainer } from "react-toastify";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
   const [name, setName] = useState("");
   const [pass, setPass] = useState("");
   const [show, setShow] = useState("LOGIN");
+  let navigate = useNavigate()
 
   const login = async () => {
     const formData = { username: name, password: pass };
@@ -43,6 +45,7 @@ const LoginPage = () => {
       console.log("Login Successful:", data);
       toast.success("ورود موفقیت‌آمیز بود! 🎉");
       localStorage.setItem('token',data.token)
+      navigate('/home');
     } catch (error) {
       console.error(error);
     }
